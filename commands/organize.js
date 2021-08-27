@@ -37,6 +37,7 @@ function o(input){
                     let destpath = path.join(dirpath , key ,filename);
                     console.log("copying " , filename ," to " ,key);
                     fs.copyFileSync(fileordirpath , destpath);
+                    //fs.unlinkSync(fileordirpath); to delete source file after copy 
                     console.log("copied" , filename);
                     break ;
                 }
