@@ -5,9 +5,15 @@ let organize = require("./commands/organize");
 let input  = process.argv.slice(2);
 
 let command = input[0];
-if(command == "help"){
-    help.helpfn();
-}
-else if(command == "organize"){
-    organize.o(input[1]);
+
+switch(command){
+    case "organize" :
+        organize.o(input[1]);
+        break;
+    case "tree":
+        tree.treefn(input[1])
+        break ;
+    case "help" :
+        help.helpfn(); 
+        break ;
 }
